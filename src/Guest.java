@@ -13,7 +13,7 @@ public class Guest
     this.phone = phone;
     this.nationality = nationality;
     this.roomNumber = roomNumber;
-    this.birthday = birthday;
+    this.birthday = birthday.copy();
     this.address = address;
 
   }
@@ -58,7 +58,7 @@ public class Guest
   }
   public Date getBirthday()
   {
-    return birthday;
+    return birthday.copy();
   }
 
   public void setBirthday(Date birthday)
