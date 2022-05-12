@@ -1,71 +1,61 @@
-public class Reservation
-{
-  private Guest guest;
-  private Room room;
-  private Date checkIn;
-  private Date checkOut;
+public class Reservation {
+    private Guest guest;
+    private Room room;
+    private Date checkInDate;
+    private Date checkOutDate;
+    private double price;
 
-  public Reservation(Guest guest, Room room, Date checkIn, Date checkOut)
-  {
-    this.guest = guest;
-    this.room = room;
-    this.checkIn = checkIn;
-    this.checkOut = checkOut;
-  }
+    public Reservation(Guest guest, Room room, Date checkInDate, Date checkOutDate) {
+        this.guest = guest;
+        this.room = room;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+        this.price = room.getPrice();
+        getGuest().setRoomNumber(room.getRoomNumber());
 
-  public Room getRoom()
-  {
-    return room;
-  }
+    }
 
-  public void setRoom(Room room)
-  {
-    this.room = room;
-  }
+    public Room getRoom() {
+        return room;
+    }
 
-  public Date getCheckIn()
-  {
-    return checkIn;
-  }
+    public void setRoom(Room room) {
+        this.room = room;
+    }
 
-  public void setCheckIn(Date checkIn)
-  {
-    this.checkIn = checkIn;
-  }
+    public Date getCheckInDate() {
+        return checkInDate;
+    }
 
-  public Date getCheckOut()
-  {
-    return checkOut;
-  }
+    public void setCheckInDate(Date checkInDate) {
+        this.checkInDate = checkInDate;
+    }
 
-  public void setCheckOut(Date checkOut)
-  {
-    this.checkOut = checkOut;
-  }
+    public Date getCheckOutDate() {
+        return checkOutDate;
+    }
 
-  public Guest getGuest()
-  {
-    return guest;
-  }
+    public void setCheckOutDate(Date checkOutDate) {
+        this.checkOutDate = checkOutDate;
+    }
 
-  public void setGuest(Guest guest)
-  {
-    this.guest = guest;
-  }/* ??????*/
+    public Guest getGuest() {
+        return guest;
+    }
 
-  public double getPrice()
-  {
-    return room.getPrice();/* ??????*/
-  }
+    public void setGuest(Guest guest) {
+        this.guest = guest;
+    }
 
-  public void applyDiscount(double discount)
-  {
-    discount = getPrice() * 0.10;
-  }/* ??????*/
+    public double getPrice() {
+        return price;
+    }
+    public void applyDiscount(int discount) {
+        this.price = (this.price * discount) / 100;
+    }
 
-  public String toString()
-  {
-    return "Reservation{" + "guest=" + guest + ", room=" + room + ", checkIn="
-        + checkIn + ", checkOut=" + checkOut + '}';
-  }
+    public String toString() {
+        return "Reservation{" + "guest=" + guest + ", room=" + room + ", checkIn="
+                + checkInDate + ", checkOut=" + checkOutDate + '}';
+    }
 }

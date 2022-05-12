@@ -1,13 +1,13 @@
 public class Guest
 {
   private String name;
-  private int phone;
   private String nationality;
-  private String roomNumber;
+  private int phone;
+  private int roomNumber;
   private Date birthday;
   private Address address;
 
-  public Guest(String name,int phone,String nationality,String roomNumber,Date birthday,Address address)
+  public Guest(String name,int phone,String nationality,int roomNumber,Date birthday,Address address)
   {
     this.name = name;
     this.phone = phone;
@@ -47,12 +47,12 @@ public class Guest
     this.nationality = nationality;
   }
 
-  public String getRoomNumber()
+  public int getRoomNumber()
   {
     return roomNumber;
   }
 
-  public void setRoomNumber(String roomNumber)
+  public void setRoomNumber(int roomNumber)
   {
     this.roomNumber = roomNumber;
   }
@@ -60,7 +60,6 @@ public class Guest
   {
     return birthday.copy();
   }
-
   public void setBirthday(Date birthday)
   {
     this.birthday = birthday.copy();
@@ -81,7 +80,12 @@ public class Guest
     {
       return false;
     }
-    else return this.getName().equals(other.getName()) && this.getNationality().equals(other.getNationality()) && this.getBirthday().equals(other.getBirthday()) && this.getPhone()==other.getPhone() && this.getAddress().equals(other.getAddress()) && this.getRoomNumber().equals(other.getRoomNumber());
+    else return this.getName().equals(other.getName())
+            && this.getNationality().equals(other.getNationality())
+            && this.getBirthday().equals(other.getBirthday())
+            && this.getPhone()==other.getPhone()
+            && this.getAddress().equals(other.getAddress())
+            && this.getRoomNumber()==(other.getRoomNumber());
   }
 
   @Override public String toString()
