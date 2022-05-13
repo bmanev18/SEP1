@@ -1,5 +1,4 @@
 public class Date {
-    private int hour;
     private int day;
     private int month;
     private int year;
@@ -10,20 +9,6 @@ public class Date {
         this.year = year;
     }
 
-    public Date(int day, int month, int year, int hour) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-        this.hour = hour;
-    }
-
-    public int getHour() {
-        return hour;
-    }
-
-    public void setHour(int hour) {
-        this.hour = hour;
-    }
 
     public int getDay() {
         return day;
@@ -162,7 +147,7 @@ public class Date {
     }
 
     public Date copy() {
-        return new Date(hour, day, month, year);
+        return new Date( day, month, year);
     }
 
     public boolean equals(Object obj)
@@ -176,7 +161,7 @@ public class Date {
     }
 
     public String toString() {
-        return "Date{" + "hour=" + hour + ", day=" + day + ", month=" + month
+        return "Date{" + " day=" + day + ", month=" + month
                 + ", year=" + year + '}';
     }
 }
