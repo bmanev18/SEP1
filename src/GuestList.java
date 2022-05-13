@@ -28,6 +28,11 @@ public class GuestList {
         }
         return null;
     }
+    
+    
+    public Guest getMainGuest() {
+    return guests.get(0);
+  }
 
     @Override
     public String toString() {
