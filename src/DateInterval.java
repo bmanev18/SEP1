@@ -23,6 +23,17 @@ public class DateInterval
     this.checkOutDate = departureDate;
   }
 
+  public int calcP(Date checkInDate,Date checkOutDate)
+  {
+    int counter=0;
+    while(!(checkInDate.equals(checkOutDate)))
+    {
+      counter++;
+      checkInDate.nextDay();
+    }
+    return counter;
+  }
+
   @Override public String toString()
   {
     return "DateInterval{" + "checkInDate=" + checkInDate + ", checkOutDate="
