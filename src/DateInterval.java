@@ -3,6 +3,12 @@ public class DateInterval
   private Date checkInDate;
   private Date checkOutDate;
 
+  public  DateInterval(Date checkInDate,Date checkOutDate)
+  {
+    this.checkInDate=checkInDate;
+    this.checkOutDate=checkOutDate;
+  }
+  
   public Date getCheckInDate()
   {
     return checkInDate;
