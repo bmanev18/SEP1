@@ -46,10 +46,11 @@ public class Reservation
     this.guestList = guestList;
   }
 
-  /*public GuestList getBooker()
+  public Guest getBooker()
   {
-    return GuestList.getMainGuest();
-  }*/
+    return guestList.getMainGuest();
+  }
+
   public double getPrice()
   {
     return price;
