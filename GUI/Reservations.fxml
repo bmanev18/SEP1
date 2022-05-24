@@ -313,6 +313,68 @@
                   </HBox>
                </content>
             </Tab>
+            <Tab text="Search for Available Rooms">
+               <content>
+                  <HBox maxHeight="395.0" prefHeight="100.0" prefWidth="794.0" style="-fx-background-color: #302E2E;">
+                     <children>
+                        <TableView maxHeight="373.0" prefHeight="400.0" prefWidth="800.0">
+                           <columns>
+                              <TableColumn prefWidth="34.0" text="№" />
+                              <TableColumn prefWidth="41.0" text="Floor" />
+                              <TableColumn prefWidth="150.0" text="Type" />
+                              <TableColumn prefWidth="75.0" text="Price" />
+                              <TableColumn prefWidth="272.0" text="Smoking" />
+                           </columns>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </TableView>
+                        <VBox prefHeight="389.0" prefWidth="454.0" spacing="5.0">
+                           <children>
+                              <FlowPane prefHeight="20.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Check-In Date" textFill="WHITE">
+                                       <FlowPane.margin>
+                                          <Insets left="5.0" />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <DatePicker prefHeight="25.0" prefWidth="121.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </FlowPane>
+                              <FlowPane layoutX="10.0" layoutY="110.0" prefHeight="20.0" prefWidth="200.0">
+                                 <children>
+                                    <Label text="Check-Out Date" textFill="WHITE" />
+                                    <DatePicker prefHeight="25.0" prefWidth="113.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </FlowPane>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Search">
+                                 <VBox.margin>
+                                    <Insets left="55.0" top="90.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Create Reservation">
+                                 <VBox.margin>
+                                    <Insets left="40.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets top="100.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </children>
