@@ -110,9 +110,9 @@
          </children>
       </FlowPane>
       <ButtonBar prefHeight="40.0" prefWidth="489.0">
-        <buttons>
-            <Button defaultButton="true" mnemonicParsing="false" text="Add Guest" />
-        </buttons>
+         <buttons>
+            <Button defaultButton="true" mnemonicParsing="false" text="Save" />
+         </buttons>
          <VBox.margin>
             <Insets />
          </VBox.margin>
