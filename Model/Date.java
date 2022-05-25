@@ -1,3 +1,5 @@
+package Model;
+
 public class Date {
     private int day;
     private int month;
@@ -84,8 +86,23 @@ public class Date {
         return other.day==day && other.month==month && other.year==year;
     }
 
-    public String toString() {
-        return "Date{" + " day=" + day + ", month=" + month
-                + ", year=" + year + '}';
+    public boolean isBefore(Date date) {
+        if (this.year >= date.year) {
+            if (this.year > date.year) {
+                return false;
+            }
+            if (this.month >= date.month) {
+                if (this.month > date.month) {
+                    return false;
+                }
+                return this.day >= date.day;
+            }
+        }
+        return true;
     }
+
+    public String toString() {
+        return String.format("%d/%2d/%d", day, month, year);
+    }
+
 }
