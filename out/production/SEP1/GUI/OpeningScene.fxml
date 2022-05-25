@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="100.0" fitWidth="480.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/mobile%20logo.png" />
+         </image>
+      </ImageView>
+      <HBox cache="true" prefHeight="401.0" prefWidth="807.0" style="-fx-border-style: solid; -fx-background-color: #302E2E;">
+         <children>
+            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="202.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 5px;" text="Manage Reservations" translateX="150.0" translateY="90.0">
+               <graphic>
+                  <ImageView fitHeight="144.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/reservation-icon-18.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Corbel Light" size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="200.0" prefWidth="195.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 5px;" text="Manage Rooms" translateX="250.0" translateY="90.0">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/bedroom-icon-0.png" />
+                     </image>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Corbel Light" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
