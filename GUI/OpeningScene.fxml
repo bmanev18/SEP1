@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
    <children>
       <MenuBar>
         <menus>
@@ -39,7 +39,7 @@
       </ImageView>
       <HBox cache="true" prefHeight="401.0" prefWidth="807.0" style="-fx-border-style: solid; -fx-background-color: #302E2E;">
          <children>
-            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="202.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 5px;" text="Manage Reservations" translateX="150.0" translateY="90.0">
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#switchToReservations" prefHeight="202.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 5px;" text="Manage Reservations" translateX="150.0" translateY="90.0">
                <graphic>
                   <ImageView fitHeight="144.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -51,7 +51,7 @@
                   <Font name="Corbel Light" size="18.0" />
                </font>
             </Button>
-            <Button alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="200.0" prefWidth="195.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 5px;" text="Manage Rooms" translateX="250.0" translateY="90.0">
+            <Button alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#switchToManagingRooms" prefHeight="200.0" prefWidth="195.0" style="-fx-background-color: white; -fx-border-style: solid; -fx-border-width: 5px;" text="Manage Rooms" translateX="250.0" translateY="90.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
