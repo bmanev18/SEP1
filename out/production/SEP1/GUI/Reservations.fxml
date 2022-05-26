@@ -321,13 +321,13 @@
                <content>
                   <HBox maxHeight="395.0" prefHeight="100.0" prefWidth="794.0" style="-fx-background-color: #302E2E;">
                      <children>
-                        <TableView maxHeight="373.0" prefHeight="400.0" prefWidth="800.0">
+                        <TableView fx:id="table" maxHeight="373.0" prefHeight="400.0" prefWidth="800.0">
                            <columns>
-                              <TableColumn prefWidth="34.0" text="№" />
-                              <TableColumn prefWidth="41.0" text="Floor" />
-                              <TableColumn prefWidth="150.0" text="Type" />
-                              <TableColumn prefWidth="75.0" text="Price" />
-                              <TableColumn prefWidth="272.0" text="Smoking" />
+                              <TableColumn fx:id="roomNumber" prefWidth="34.0" text="№" />
+                              <TableColumn fx:id="floor" prefWidth="41.0" text="Floor" />
+                              <TableColumn fx:id="type" prefWidth="150.0" text="Type" />
+                              <TableColumn fx:id="price" prefWidth="75.0" text="Price" />
+                              <TableColumn fx:id="smoking" prefWidth="272.0" text="Smoking" />
                            </columns>
                            <HBox.margin>
                               <Insets left="20.0" top="10.0" />
