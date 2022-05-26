@@ -20,16 +20,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReservationsController">
    <children>
       <BorderPane prefHeight="20.0" prefWidth="200.0" style="-fx-background-color: white;">
-         <left>
-            <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@Images/back-button-icon-115498360380gopxfa3ql.png" />
-               </image>
-            </ImageView>
-         </left>
          <right>
             <ImageView fitHeight="75.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
@@ -37,6 +30,17 @@
                </image>
             </ImageView>
          </right>
+         <left>
+            <Button mnemonicParsing="false" onAction="#goBackwards" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/download.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </left>
       </BorderPane>
       <TabPane prefHeight="450.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>

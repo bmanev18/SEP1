@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4f1694a-29bc-4da5-b6a5-9cd30ebaaddc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Managing Rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +45,13 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="GUI" />
       <recent name="" />
       <recent name="Utilities" />
       <recent name="Model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.test">
     <configuration name="LoadInitialData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoadInitialData" />
       <module name="SEP1" />
@@ -93,9 +92,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.LoadInitialData" />
-        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>

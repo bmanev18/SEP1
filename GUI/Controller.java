@@ -28,7 +28,7 @@ public class Controller
 
   public void switchToReservations(ActionEvent event) throws IOException
   {
-    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Reservations.fxml")));
+    root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Reservations.fxml")));
     stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
     scene = new Scene(root);
     stage.setScene(scene);

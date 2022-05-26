@@ -4,7 +4,14 @@
     <list default="true" id="b4f1694a-29bc-4da5-b6a5-9cd30ebaaddc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Managing Rooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/Images/back-button-icon-115498360380gopxfa3ql.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Reservations.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Images/back-button-icon-115498360380gopxfa3ql.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/Reservations.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +54,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="GUI" />
       <recent name="" />
       <recent name="Utilities" />
       <recent name="Model" />
