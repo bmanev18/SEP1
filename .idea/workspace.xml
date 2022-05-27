@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4f1694a-29bc-4da5-b6a5-9cd30ebaaddc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/SEP1/testModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/ManagingRoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ManagingRoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Reservations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/ReservationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ReservationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ModelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Reservations.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Reservations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Rooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Rooms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/Reservations.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/ReservationsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/ReservationsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/ModelManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Rooms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Rooms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRoomsController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

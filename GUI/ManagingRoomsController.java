@@ -12,8 +12,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -42,6 +44,18 @@ public class ManagingRoomsController implements Initializable {
     private TableColumn<Room, String> smoking;
 
 
+    @FXML
+    private TextField roomNumTF;
+    @FXML
+    private TextField roomFloorTF;
+    @FXML
+    private TextField roomTypeTF;
+    @FXML
+    private TextField roomPriceTF;
+    @FXML
+    private RadioButton smokingOption;
+
+
     public void goBackwards(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("OpeningScene.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -56,7 +70,7 @@ public class ManagingRoomsController implements Initializable {
         roomFloor.setCellValueFactory(new PropertyValueFactory<Room, String>("floor"));
         roomType.setCellValueFactory(new PropertyValueFactory<Room, String>("roomType"));
         roomPrice.setCellValueFactory(new PropertyValueFactory<Room, String>("price"));
-        smoking.setCellValueFactory(new PropertyValueFactory<Room, String>("smoking"));
+        //smoking.setCellValueFactory(new PropertyValueFactory<Room, String>("smoking"));
 
         modelManager = new ModelManager("reservations.bin", "rooms.bin");
         ObservableList<Room> list = FXCollections.observableArrayList();
