@@ -1,9 +1,10 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Reservations {
+public class Reservations implements Serializable {
     private ArrayList<Reservation> reservations;
 
     public Reservations() {

@@ -1,6 +1,8 @@
 package Model;
 
-public class Reservation {
+import java.io.Serializable;
+
+public class Reservation implements Serializable {
     private Rooms rooms;
     private Interval interval;
     private Guests guests;

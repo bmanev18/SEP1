@@ -7,150 +7,117 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Arrays;
 
-public class ModelManager
-{
-  private String reFileName;
-  private String roFileName;
+public class ModelManager {
+    private String reFileName;
+    private String roFileName;
 
-  public ModelManager(String reFileName, String roFileName)
-  {
-    this.reFileName = reFileName;
-    this.roFileName = roFileName;
-  }
+    public ModelManager(String reFileName, String roFileName) {
+        this.reFileName = reFileName;
+        this.roFileName = roFileName;
+    }
 
-  // TODO -----------------------------------------------
+    // TODO -----------------------------------------------
 
-  public Rooms getRooms()
-  {
-    Rooms rooms = new Rooms();
+    public Rooms getRooms() {
+        Rooms rooms = new Rooms();
 
-    try
-    {
-      rooms = (Rooms) MyFileHandler.readFromBinaryFile(roFileName);
+        try {
+            rooms = (Rooms) MyFileHandler.readFromBinaryFile(roFileName);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("IO Error reading file");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Class Not Found");
+        }
+        return rooms;
     }
-    catch (FileNotFoundException e)
-    {
-      System.out.println("File not found");
-    }
-    catch (IOException e)
-    {
-      System.out.println("IO Error reading file");
-    }
-    catch (ClassNotFoundException e)
-    {
-      System.out.println("Class Not Found");
-    }
-    return rooms;
-  }
 
-  public void addRoom(String roomNum, String roomType)
-  {
-    getRooms().add(new Room(Integer.parseInt(roomNum), roomType));
-  }
+    public void addRoom(String roomNum, String roomType) {
+        getRooms().add(new Room(Integer.parseInt(roomNum), roomType));
+    }
 
-  public void removeRoom(String roomNum)
-  {
-    getRooms().remove(getRooms().get(Integer.parseInt(roomNum)));
-  }
+    public void removeRoom(String roomNum) {
+        getRooms().remove(getRooms().get(Integer.parseInt(roomNum)));
+    }
 
-  public Rooms search(Interval interval)
-  {
-    Rooms available = getRooms().copy();
-    for (Reservation reservation : getReservations().getAll())
-    {
-      if ((!interval.getCheckOutDate().isBefore(reservation.getInterval().getCheckInDate()))
-          || (!reservation.getInterval().getCheckOutDate().isBefore(interval.getCheckInDate())))
-      {
-        available.getAll().removeAll(reservation.getRooms().getAll());
-      }
+    public Rooms search(Interval interval) {
+        Rooms available = getRooms().copy();
+        for (Reservation reservation : getReservations().getAll()) {
+            if ((!interval.getCheckOutDate().isBefore(reservation.getInterval().getCheckInDate()))
+                    || (!reservation.getInterval().getCheckOutDate().isBefore(interval.getCheckInDate()))) {
+                available.getAll().removeAll(reservation.getRooms().getAll());
+            }
+        }
+        return available;
     }
-    return available;
-  }
 
-  public Rooms filter(Interval interval, String roomType, int price)
-  {
-    Rooms available = this.search(interval);
-    if (roomType != null)
-    {
-      available.filter(roomType);
-    }
-    if (price != -1)
-    {
-      available.filer(price);
-    }
-    return available;
-  }
+    public Rooms filter(Interval interval, String roomType, int price) {
+        Rooms available = this.search(interval);
+        if (price != 0) {
+            available.filer(price);
+            if (roomType != null) {
+                available.filter(roomType);
+            }
+        }
+        return available;
+    } //  First return all available rooms for a given Interval and filter if requested
 
-  public void saveRooms(Rooms rooms)
-  {
-    try
-    {
-      MyFileHandler.writeToBinaryFile(roFileName, rooms);
-    }
-    catch (FileNotFoundException e)
-    {
-      System.out.println("File not found");
-    }
-    catch (IOException e)
-    {
-      System.out.println("IO Error writing to file");
-    }
-  }
 
-  // TODO -----------------------------------------------
+    public Rooms searchToday(LocalDate local) {
+        Date today = new Date(local.getDayOfMonth(), local.getMonthValue(), local.getYear());
+        Rooms rooms = this.getRooms().copy();
+        for (Reservation reservation : getReservations().getAll()) {
+            if (!reservation.getInterval().getCheckInDate().equals(today)) {
+                rooms.getAll().removeAll(reservation.getRooms().getAll());
+            }
+        }
+        return rooms;
+    }
 
-  public Reservations getReservations()
-  {
-    Reservations reservations = new Reservations();
+    public void saveRooms(Rooms rooms) {
+        try {
+            MyFileHandler.writeToBinaryFile(roFileName, rooms);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("IO Error writing to file");
+        }
+    }
 
-    try
-    {
-      reservations = (Reservations) MyFileHandler.readFromBinaryFile(roFileName);
-    }
-    catch (FileNotFoundException e)
-    {
-      System.out.println("File not found");
-    }
-    catch (IOException e)
-    {
-      System.out.println("IO Error reading file");
-    }
-    catch (ClassNotFoundException e)
-    {
-      System.out.println("Class Not Found");
-    }
-    return reservations;
-  }
+    // TODO -----------------------------------------------
 
-  public void saveReservations(Reservations reservations)
-  {
-    try
-    {
-      MyFileHandler.writeToBinaryFile(reFileName, reservations);
-    }
-    catch (FileNotFoundException e)
-    {
-      System.out.println("File not found");
-    }
-    catch (IOException e)
-    {
-      System.out.println("IO Error writing to file");
-    }
-  }
+    public Reservations getReservations() {
+        Reservations reservations = new Reservations();
 
-  // TODO -----------------------------------------------
+        try {
+            reservations = (Reservations) MyFileHandler.readFromBinaryFile(reFileName);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("IO Error reading file");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Class Not Found");
+        }
+        return reservations;
+    }
 
-  public Interval createInterval(LocalDate in, LocalDate out)
-  {
-    return new Interval(new Date(in.getDayOfMonth(), in.getMonthValue(), in.getYear()),
-        new Date(out.getDayOfMonth(), out.getMonthValue(), out.getYear()));
-  }
+    public void saveReservations(Reservations reservations) {
+        try {
+            MyFileHandler.writeToBinaryFile(reFileName, reservations);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            System.out.println("IO Error writing to file");
+        }
+    }
 
-  //  public Rooms getTodays(Date date)
-  //  {
-  //      Rooms rooms = getRooms().copy();
-  //      rooms.getAll().removeIf(room->room.)
-  //      return
-  //  }
+    // TODO -----------------------------------------------
+
+    public Interval createInterval(LocalDate in, LocalDate out) {
+        return new Interval(new Date(in.getDayOfMonth(), in.getMonthValue(), in.getYear()),
+                new Date(out.getDayOfMonth(), out.getMonthValue(), out.getYear()));
+    }
+
 
 }

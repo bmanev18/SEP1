@@ -1,6 +1,7 @@
 package Model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Rooms implements Serializable {
@@ -41,23 +42,16 @@ public class Rooms implements Serializable {
 
     public Rooms filter(String roomType) {
         Rooms filteredList = this.copy();
-        for (Room room : filteredList.getAll()) {
-            if (!room.getRoomType().equals(roomType)) {
-                filteredList.remove(room);
-            }
-        }
+        filteredList.getAll().removeIf(room -> !room.getRoomType().equals(roomType));
         return filteredList;
     }
 
     public Rooms filer(int price) {
         Rooms filteredList = this.copy();
-        for (Room room : filteredList.getAll()) {
-            if (room.getPrice() > price) {
-                filteredList.remove(room);
-            }
-        }
+        filteredList.getAll().removeIf(room -> room.getPrice() > price);
         return filteredList;
     }
+
 
     @Override
     public String toString() {

@@ -321,7 +321,7 @@
                <content>
                   <HBox maxHeight="395.0" prefHeight="100.0" prefWidth="794.0" style="-fx-background-color: #302E2E;">
                      <children>
-                        <TableView fx:id="table" maxHeight="373.0" prefHeight="400.0" prefWidth="800.0">
+                        <TableView fx:id="searchTable" maxHeight="373.0" prefHeight="400.0" prefWidth="800.0">
                            <columns>
                               <TableColumn fx:id="roomNumber" prefWidth="34.0" text="№" />
                               <TableColumn fx:id="floor" prefWidth="41.0" text="Floor" />
@@ -357,7 +357,7 @@
                                     <Insets left="5.0" />
                                  </VBox.margin>
                               </FlowPane>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Search">
+                              <Button mnemonicParsing="false" onAction="#search" onMouseClicked="#search" prefHeight="25.0" prefWidth="95.0" text="Search">
                                  <VBox.margin>
                                     <Insets left="55.0" top="90.0" />
                                  </VBox.margin>
