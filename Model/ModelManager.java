@@ -5,7 +5,6 @@ import Utilities.MyFileHandler;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Arrays;
 
 public class ModelManager {
     private String reFileName;
@@ -33,12 +32,27 @@ public class ModelManager {
         return rooms;
     }
 
-    public void addRoom(String roomNum, String roomType) {
-        getRooms().add(new Room(Integer.parseInt(roomNum), roomType));
+    public void addRoom(String roomNum, String roomType, String price) {
+        Rooms rooms = getRooms();
+        rooms.add(new Room(Integer.parseInt(roomNum), roomType, Double.parseDouble(price)));
+        saveRooms(rooms);
     }
 
-    public void removeRoom(String roomNum) {
-        getRooms().remove(getRooms().get(Integer.parseInt(roomNum)));
+    public void removeRoom(Room room) {
+        Rooms rooms = getRooms();
+        rooms.remove(room);
+        saveRooms(rooms);
+
+    }
+
+    public void changeRoom(int index, String number, /*String floor,*/ String type, String price) {
+        Rooms rooms = getRooms();
+        Room selected = rooms.get(index);
+        selected.setNumber(Integer.parseInt(number));
+        selected.setFloor(Integer.parseInt(number) / 100);
+        selected.setRoomType(type);
+        selected.setPrice(Double.parseDouble(price));
+        saveRooms(rooms);
     }
 
     public Rooms search(Interval interval) {

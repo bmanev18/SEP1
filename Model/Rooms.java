@@ -1,7 +1,6 @@
 package Model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Rooms implements Serializable {
@@ -27,7 +26,8 @@ public class Rooms implements Serializable {
         rooms.add(room);
     }
 
-    public Room get(int number) {
+
+    public Room getByNumber(int number) {
         for (Room room : rooms) {
             if (room.getRoomNumber() == number) {
                 return room;
@@ -35,6 +35,11 @@ public class Rooms implements Serializable {
         }
         return null;
     }
+
+    public Room get(int index) {
+        return rooms.get(index);
+    }
+
 
     public Rooms copy() {
         return new Rooms(this.rooms);

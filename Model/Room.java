@@ -14,9 +14,11 @@ public class Room implements Serializable {
         this.roomType = roomType;
         switch (roomType) {
             case ("s1") -> this.price = 259;
-            case ("s2"), ("s3") -> this.price = 399;
+            case ("s2") -> this.price = 399;
+            case ("s3") -> this.price = 399;
             case ("sb") -> this.price = 129;
-            case ("dbk"), ("dbt") -> this.price = 169;
+            case ("dbk") -> this.price = 169;
+            case ("dbt") -> this.price = 169;
         }
     }
 
@@ -31,7 +33,7 @@ public class Room implements Serializable {
         return roomNumber;
     }
 
-    public void setRoomNumber(int roomNumber) {
+    public void setNumber(int roomNumber) {
         this.roomNumber = roomNumber;
         this.floor = roomNumber / 100;
     }

@@ -42,7 +42,7 @@
         </BorderPane>
         <HBox prefHeight="450.0" prefWidth="200.0">
             <children>
-                <TableView fx:id="allRooms" maxHeight="350.0" prefHeight="350.0" prefWidth="376.0">
+                <TableView fx:id="allRooms" maxHeight="350.0" onMouseClicked="#rowClicked" prefHeight="350.0" prefWidth="376.0">
                     <columns>
                         <TableColumn fx:id="roomNum" prefWidth="50.85714828968048" text="№" />
                         <TableColumn fx:id="roomFloor" prefWidth="46.857147216796875" text="Floor" />
@@ -58,7 +58,7 @@
                     <children>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
                             <children>
-                                <RadioButton mnemonicParsing="false" text="Edit" textFill="WHITE" />
+                                <RadioButton fx:id="edit" mnemonicParsing="false" onMouseClicked="#editable" text="Edit" textFill="WHITE" />
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
@@ -68,7 +68,7 @@
                                         <Insets right="5.0" />
                                     </padding>
                                 </Label>
-                                <TextField prefHeight="25.0" prefWidth="152.0" promptText="101" />
+                                <TextField fx:id="roomNumTF" prefHeight="25.0" prefWidth="152.0" promptText="101" />
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
@@ -78,7 +78,7 @@
                                         <Insets right="5.0" />
                                     </padding>
                                 </Label>
-                                <TextField prefHeight="25.0" prefWidth="152.0" promptText="1" />
+                                <TextField fx:id="roomFloorTF" prefHeight="25.0" prefWidth="152.0" promptText="1" />
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
@@ -88,7 +88,7 @@
                                         <Insets right="5.0" />
                                     </padding>
                                 </Label>
-                                <TextField prefHeight="25.0" prefWidth="152.0" promptText="Suite" />
+                                <TextField fx:id="roomTypeTF" prefHeight="25.0" prefWidth="152.0" promptText="Suite" />
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
@@ -98,7 +98,7 @@
                                         <Insets right="5.0" />
                                     </padding>
                                 </Label>
-                                <TextField prefHeight="25.0" prefWidth="152.0" promptText="500" />
+                                <TextField fx:id="roomPriceTF" prefHeight="25.0" prefWidth="152.0" promptText="500" />
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
@@ -108,13 +108,14 @@
                                         <Insets right="5.0" />
                                     </padding>
                                 </Label>
-                                <RadioButton mnemonicParsing="false" text="Allowed" textFill="WHITE" />
+                                <RadioButton fx:id="smokingOption" mnemonicParsing="false" text="Allowed" textFill="WHITE" />
                             </children>
                         </FlowPane>
                         <ButtonBar maxWidth="300.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="10.0">
                             <buttons>
-                                <Button mnemonicParsing="false" text="Save" translateX="-80.0" />
-                                <Button defaultButton="true" mnemonicParsing="false" text="Add Room" />
+                                <Button fx:id="save" mnemonicParsing="false" onMouseClicked="#save" text="Save" />
+                        <Button fx:id="remove" mnemonicParsing="false" onMouseClicked="#delete" text="Remove " />
+                                <Button fx:id="add" defaultButton="true" mnemonicParsing="false" onMouseClicked="#add" text="Add Room" />
                             </buttons>
                         </ButtonBar>
                     </children>
