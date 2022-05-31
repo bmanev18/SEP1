@@ -63,6 +63,18 @@ public class Room implements Serializable {
     }
 
     @Override
+    public boolean equals(Object object) {
+        if (!(object instanceof Room)) {
+            return false;
+        } else {
+            Room room = (Room) object;
+            return this.roomNumber == room.roomNumber &&
+                    this.roomType.equals(room.roomType) &&
+                    this.price == room.price;
+        }
+    }
+
+    @Override
     public String toString() {
         return String.format("\n%d - %s : %.2f", roomNumber, roomType, price);
     }

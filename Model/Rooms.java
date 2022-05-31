@@ -19,7 +19,12 @@ public class Rooms implements Serializable {
     }
 
     public void remove(Room room) {
-        rooms.remove(room);
+        rooms.removeIf(room1 -> room1.equals(room));
+        /*System.out.println(room.getRoomNumber());
+        System.out.println(room.getFloor());
+        System.out.println(room.getRoomType());
+        System.out.println(room.getPrice());
+        System.out.println(rooms.size());*/
     }
 
     public void add(Room room) {

@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -44,50 +45,6 @@
       </BorderPane>
       <TabPane prefHeight="450.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Todays Arrivals">
-               <content>
-                  <HBox maxHeight="395.0" prefHeight="100.0" prefWidth="794.0" style="-fx-background-color: #302E2E;">
-                     <children>
-                        <TableView maxHeight="360.0" prefHeight="360.0" prefWidth="811.0">
-                          <columns>
-                            <TableColumn prefWidth="127.0" text="Number" />
-                            <TableColumn minWidth="3.0" prefWidth="112.0" text="№ Guests" />
-                              <TableColumn prefWidth="147.0" text="Room(s)" />
-                              <TableColumn prefWidth="181.0" text="Check-in Time" />
-                          </columns>
-                           <HBox.margin>
-                              <Insets left="20.0" top="15.0" />
-                           </HBox.margin>
-                        </TableView>
-                        <VBox prefHeight="389.0" prefWidth="454.0" spacing="5.0">
-                           <children>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Edit">
-                                 <VBox.margin>
-                                    <Insets left="55.0" top="10.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <Button defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Check-in">
-                                 <VBox.margin>
-                                    <Insets left="55.0" top="10.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Delete" textFill="#222020" underline="true">
-                                 <VBox.margin>
-                                    <Insets left="55.0" top="10.0" />
-                                 </VBox.margin>
-                              </Button>
-                           </children>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets top="100.0" />
-                           </padding>
-                        </VBox>
-                     </children>
-                  </HBox>
-               </content>
-          </Tab>
             <Tab text="All Reservations">
                <content>
                   <HBox maxHeight="395.0" prefHeight="100.0" prefWidth="794.0" style="-fx-background-color: #302E2E;">
@@ -105,7 +62,30 @@
                         </TableView>
                         <VBox prefHeight="389.0" prefWidth="454.0" spacing="5.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Edit">
+                              <Label text="Find Reservation" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="30.0" top="-60.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField maxWidth="150.0" prefHeight="25.0" prefWidth="170.0" promptText="Phone Number">
+                                 <VBox.margin>
+                                    <Insets left="30.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Button defaultButton="true" layoutX="65.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Search">
+                                 <VBox.margin>
+                                    <Insets left="55.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <RadioButton mnemonicParsing="false" text="View Todays Arrivals" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets left="35.0" top="20.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <Button defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Check-In">
                                  <VBox.margin>
                                     <Insets left="55.0" top="10.0" />
                                  </VBox.margin>
@@ -115,7 +95,12 @@
                                     <Insets left="55.0" top="10.0" />
                                  </VBox.margin>
                               </Button>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Delete" textFill="#222020" underline="true">
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Edit" textFill="#222020">
+                                 <VBox.margin>
+                                    <Insets left="55.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button layoutX="65.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Delete" textFill="#222020" underline="true">
                                  <VBox.margin>
                                     <Insets left="55.0" top="10.0" />
                                  </VBox.margin>

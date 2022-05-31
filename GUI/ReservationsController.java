@@ -1,6 +1,7 @@
 package GUI;
 
 import Model.ModelManager;
+import Model.Reservation;
 import Model.Room;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,6 +29,8 @@ public class ReservationsController implements Initializable {
     private Scene scene;
     private Parent root;
 
+    @FXML
+    private TableView<Reservation> reservations;
     @FXML
     private TableView<Room> searchTable;
     @FXML
@@ -59,9 +62,11 @@ public class ReservationsController implements Initializable {
         floor.setCellValueFactory(new PropertyValueFactory<Room, String>("floor"));
         type.setCellValueFactory(new PropertyValueFactory<Room, String>("roomType"));
         price.setCellValueFactory(new PropertyValueFactory<Room, String>("price"));
-        smoking.setCellValueFactory(new PropertyValueFactory<Room, String>("smoking"));
+        //smoking.setCellValueFactory(new PropertyValueFactory<Room, String>("smoking"));
 
-        modelManager = new ModelManager("rooms.bin", "rooms.bin");
+        modelManager = new ModelManager("reservations.bin", "rooms.bin");
+        update1();
+
         ObservableList<Room> list = FXCollections.observableArrayList();
         list.addAll(modelManager.getRooms().getAll());
         searchTable.setItems(list);
@@ -72,5 +77,11 @@ public class ReservationsController implements Initializable {
         list.addAll(
                 modelManager.search(modelManager.createInterval(checkinDate.getValue(), checkOutDate.getValue())).getAll());
         searchTable.setItems(list);
+    }
+
+    public void update1() {
+        ObservableList<Reservation> list = FXCollections.observableArrayList();
+        list.addAll(modelManager.getReservations().getAll());
+        reservations.setItems(list);
     }
 }

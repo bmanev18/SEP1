@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4f1694a-29bc-4da5-b6a5-9cd30ebaaddc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ManagingRooms.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/ManagingRoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ManagingRoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ModelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Rooms.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Rooms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRooms.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/ManagingRoomsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/ModelManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Rooms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Rooms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/rooms.bin" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/rooms.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rooms.bin" beforeDir="false" afterPath="$PROJECT_DIR$/rooms.bin" afterDir="false" />
-    </list>
+    <list default="true" id="b4f1694a-29bc-4da5-b6a5-9cd30ebaaddc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,12 +28,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
-  }
-}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\manev\Documents\GitHub\SEP1" />
@@ -66,15 +45,8 @@
       <recent name="Model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.test">
-    <configuration name="LoadInitialData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LoadInitialData" />
-      <module name="SEP1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.GUI.test">
+    <configuration name="GUI.main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.main" />
       <module name="SEP1" />
       <extension name="coverage">
@@ -87,7 +59,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GUI.test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.test" />
       <module name="SEP1" />
       <extension name="coverage">
@@ -100,6 +72,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoadInitialData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LoadInitialData" />
+      <module name="SEP1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testModel" />
       <module name="SEP1" />
@@ -108,17 +87,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.GUI.main" />
+      <item itemvalue="Application.GUI.test" />
       <item itemvalue="Application.testModel" />
       <item itemvalue="Application.LoadInitialData" />
-      <item itemvalue="Application.test" />
-      <item itemvalue="Application.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
+        <item itemvalue="Application.GUI.test" />
         <item itemvalue="Application.LoadInitialData" />
         <item itemvalue="Application.testModel" />
-        <item itemvalue="Application.main" />
+        <item itemvalue="Application.GUI.main" />
       </list>
     </recent_temporary>
   </component>

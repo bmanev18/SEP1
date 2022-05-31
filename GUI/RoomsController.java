@@ -2,8 +2,6 @@ package GUI;
 
 import Model.ModelManager;
 import Model.Room;
-import Model.Rooms;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,7 +21,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class ManagingRoomsController implements Initializable {
+public class RoomsController implements Initializable {
     private ModelManager modelManager;
     private TableView.TableViewSelectionModel<Room> selectionModel;
     ObservableList<Room> select;
@@ -71,11 +69,11 @@ public class ManagingRoomsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        roomNum.setCellValueFactory(new PropertyValueFactory<Room, String>("roomNumber"));
-        roomFloor.setCellValueFactory(new PropertyValueFactory<Room, String>("floor"));
-        roomType.setCellValueFactory(new PropertyValueFactory<Room, String>("roomType"));
-        roomPrice.setCellValueFactory(new PropertyValueFactory<Room, String>("price"));
-        //smoking.setCellValueFactory(new PropertyValueFactory<Room, String>("smoking"));
+        roomNum.setCellValueFactory(new PropertyValueFactory<>("roomNumber"));
+        roomFloor.setCellValueFactory(new PropertyValueFactory<>("floor"));
+        roomType.setCellValueFactory(new PropertyValueFactory<>("roomType"));
+        roomPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        //smoking.setCellValueFactory(new PropertyValueFactory<>("smoking"));
 
         modelManager = new ModelManager("reservations.bin", "rooms.bin");
         update();
@@ -110,9 +108,11 @@ public class ManagingRoomsController implements Initializable {
     }
 
     public void delete() {
-        modelManager.removeRoom(selectionModel.getSelectedItem());
+        System.out.println(modelManager.getRooms().getAll().size());
+        modelManager.removeRoom(selectionModel.getSelectedItems().get(0));
         clearTF();
         update();
+        System.out.println(modelManager.getRooms().getAll().size());
     }
 
     public void editable(MouseEvent mouseEvent) {

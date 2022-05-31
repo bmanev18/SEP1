@@ -10,7 +10,7 @@ public class Reservation implements Serializable {
     private int numberExpectedGuests;
     private boolean extraBed;
 
-    public Reservation(Guest booker, Rooms rooms, Interval interval, int numberExpectedGuests) {
+    public Reservation(Guest booker, Rooms rooms, Interval interval, int numberExpectedGuests, boolean extraBed) {
         this.guests = new Guests();
         guests.addGuest(booker);
         /* Guests created and a booker is added*/
@@ -20,6 +20,8 @@ public class Reservation implements Serializable {
         this.pricePerNight = 0;
         setPrice();
         this.numberExpectedGuests = numberExpectedGuests;
+        this.extraBed = extraBed;
+
     }
 
     public Rooms getRooms() {
@@ -70,6 +72,14 @@ public class Reservation implements Serializable {
 
     public void setNumberExpectedGuests(int number) {
         this.numberExpectedGuests = number;
+    }
+
+    public boolean isExtraBed() {
+        return extraBed;
+    }
+
+    public void setExtraBed(boolean extraBed) {
+        this.extraBed = extraBed;
     }
 
     public double totalPrice() {
