@@ -41,6 +41,8 @@ public class ModelManager {
     public void removeRoom(Room room) {
         Rooms rooms = getRooms();
         rooms.remove(room);
+        //rooms.getAll().remove(room);
+        System.out.println(room);
         saveRooms(rooms);
 
     }

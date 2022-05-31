@@ -15,25 +15,29 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ManagingRoomsController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+      prefWidth="800.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RoomsController">
     <children>
         <BorderPane prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: white;">
             <right>
-                <ImageView fitHeight="75.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                <ImageView fitHeight="75.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                           BorderPane.alignment="CENTER">
                     <image>
-                        <Image url="@Images/logo.png" />
+                        <Image url="@Images/logo.png"/>
                     </image>
                 </ImageView>
             </right>
             <left>
-                <Button mnemonicParsing="false" onAction="#goBackwards" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                <Button mnemonicParsing="false" onAction="#goBackwards" prefHeight="20.0" prefWidth="20.0"
+                        style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                     <BorderPane.margin>
-                        <Insets />
+                        <Insets/>
                     </BorderPane.margin>
                     <graphic>
                         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@Images/download.png" />
+                                <Image url="@Images/download.png"/>
                             </image>
                         </ImageView>
                     </graphic>
@@ -42,88 +46,93 @@
         </BorderPane>
         <HBox prefHeight="450.0" prefWidth="200.0">
             <children>
-                <TableView fx:id="allRooms" maxHeight="350.0" onMouseClicked="#rowClicked" prefHeight="350.0" prefWidth="376.0">
+                <TableView fx:id="allRooms" maxHeight="350.0" onMouseClicked="#rowClicked" prefHeight="350.0"
+                           prefWidth="376.0">
                     <columns>
-                        <TableColumn fx:id="roomNum" prefWidth="50.85714828968048" text="№" />
-                        <TableColumn fx:id="roomFloor" prefWidth="46.857147216796875" text="Floor" />
-                        <TableColumn fx:id="roomType" prefWidth="132.5714340209961" text="Type" />
-                        <TableColumn fx:id="roomPrice" prefWidth="76.57142639160156" text="Price" />
-                        <TableColumn fx:id="smoking" prefWidth="70.857177734375" text="Smoking" />
+                        <TableColumn fx:id="roomNum" prefWidth="50.85714828968048" text="№"/>
+                        <TableColumn fx:id="roomFloor" prefWidth="46.857147216796875" text="Floor"/>
+                        <TableColumn fx:id="roomType" prefWidth="132.5714340209961" text="Type"/>
+                        <TableColumn fx:id="roomPrice" prefWidth="76.57142639160156" text="Price"/>
+                        <TableColumn fx:id="smoking" prefWidth="70.857177734375" text="Smoking"/>
                     </columns>
                     <HBox.margin>
-                        <Insets left="50.0" top="30.0" />
+                        <Insets left="50.0" top="30.0"/>
                     </HBox.margin>
                 </TableView>
-                <VBox maxHeight="305.0" maxWidth="300.0" prefHeight="305.0" prefWidth="300.0" spacing="10.0" style="-fx-border-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-width: 5px; -fx-background-color: black;">
+                <VBox maxHeight="305.0" maxWidth="300.0" prefHeight="305.0" prefWidth="300.0" spacing="10.0"
+                      style="-fx-border-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-width: 5px; -fx-background-color: black;">
                     <children>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
                             <children>
-                                <RadioButton fx:id="edit" mnemonicParsing="false" onMouseClicked="#editable" text="Edit" textFill="WHITE" />
+                                <RadioButton fx:id="edit" mnemonicParsing="false" onMouseClicked="#editable" text="Edit"
+                                             textFill="WHITE"/>
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
                             <children>
                                 <Label prefHeight="17.0" prefWidth="31.0" text="№" textFill="WHITE">
                                     <padding>
-                                        <Insets right="5.0" />
+                                        <Insets right="5.0"/>
                                     </padding>
                                 </Label>
-                                <TextField fx:id="roomNumTF" prefHeight="25.0" prefWidth="152.0" promptText="101" />
+                                <TextField fx:id="roomNumTF" prefHeight="25.0" prefWidth="152.0" promptText="101"/>
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
                             <children>
                                 <Label text="Floor" textFill="WHITE">
                                     <padding>
-                                        <Insets right="5.0" />
+                                        <Insets right="5.0"/>
                                     </padding>
                                 </Label>
-                                <TextField fx:id="roomFloorTF" prefHeight="25.0" prefWidth="152.0" promptText="1" />
+                                <TextField fx:id="roomFloorTF" prefHeight="25.0" prefWidth="152.0" promptText="1"/>
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
                             <children>
                                 <Label text="Type" textFill="WHITE">
                                     <padding>
-                                        <Insets right="5.0" />
+                                        <Insets right="5.0"/>
                                     </padding>
                                 </Label>
-                                <TextField fx:id="roomTypeTF" prefHeight="25.0" prefWidth="152.0" promptText="Suite" />
+                                <TextField fx:id="roomTypeTF" prefHeight="25.0" prefWidth="152.0" promptText="Suite"/>
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
                             <children>
                                 <Label text="Price" textFill="WHITE">
                                     <padding>
-                                        <Insets right="5.0" />
+                                        <Insets right="5.0"/>
                                     </padding>
                                 </Label>
-                                <TextField fx:id="roomPriceTF" prefHeight="25.0" prefWidth="152.0" promptText="500" />
+                                <TextField fx:id="roomPriceTF" prefHeight="25.0" prefWidth="152.0" promptText="500"/>
                             </children>
                         </FlowPane>
                         <FlowPane prefHeight="20.0" prefWidth="200.0">
                             <children>
                                 <Label text="Smoking" textFill="WHITE">
                                     <padding>
-                                        <Insets right="5.0" />
+                                        <Insets right="5.0"/>
                                     </padding>
                                 </Label>
-                                <RadioButton fx:id="smokingOption" mnemonicParsing="false" text="Allowed" textFill="WHITE" />
+                                <RadioButton fx:id="smokingOption" mnemonicParsing="false" text="Allowed"
+                                             textFill="WHITE"/>
                             </children>
                         </FlowPane>
                         <ButtonBar maxWidth="300.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="10.0">
                             <buttons>
-                                <Button fx:id="save" mnemonicParsing="false" onMouseClicked="#save" text="Save" />
-                        <Button fx:id="remove" mnemonicParsing="false" onMouseClicked="#delete" text="Remove " />
-                                <Button fx:id="add" defaultButton="true" mnemonicParsing="false" onMouseClicked="#add" text="Add Room" />
+                                <Button fx:id="save" mnemonicParsing="false" onMouseClicked="#save" text="Save"/>
+                                <Button fx:id="remove" mnemonicParsing="false" onMouseClicked="#delete" text="Remove "/>
+                                <Button fx:id="add" defaultButton="true" mnemonicParsing="false" onMouseClicked="#add"
+                                        text="Add Room"/>
                             </buttons>
                         </ButtonBar>
                     </children>
                     <HBox.margin>
-                        <Insets bottom="30.0" left="30.0" top="60.0" />
+                        <Insets bottom="30.0" left="30.0" top="60.0"/>
                     </HBox.margin>
                     <padding>
-                        <Insets left="30.0" top="30.0" />
+                        <Insets left="30.0" top="30.0"/>
                     </padding>
                 </VBox>
             </children>

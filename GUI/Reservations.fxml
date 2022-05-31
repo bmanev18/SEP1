@@ -48,7 +48,7 @@
                <content>
                   <HBox maxHeight="395.0" prefHeight="100.0" prefWidth="794.0" style="-fx-background-color: #302E2E;">
                      <children>
-                        <TableView maxHeight="360.0" prefHeight="360.0" prefWidth="811.0">
+                        <TableView fx:id="reservations" maxHeight="360.0" prefHeight="360.0" prefWidth="811.0">
                           <columns>
                             <TableColumn prefWidth="127.0" text="Number" />
                             <TableColumn minWidth="3.0" prefWidth="112.0" text="№ Guests" />

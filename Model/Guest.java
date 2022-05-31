@@ -8,7 +8,7 @@ public class Guest {
     private Date birthday;
     private Address address;
 
-    public Guest(String name, int phone, String nationality, int roomNumber, Date birthday, Address address) {
+    public Guest(String name, int phone, String nationality, Date birthday, Address address) {
         this.name = name;
         this.phone = phone;
         this.nationality = nationality;
