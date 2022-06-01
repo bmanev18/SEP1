@@ -6,17 +6,20 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="502.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReservationsController">
-   <children>
-      <ListView fx:id="allRooms" maxWidth="480.0" prefHeight="356.0" prefWidth="469.0" />
-      <ButtonBar prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Cancel" />
-            <Button defaultButton="true" layoutX="410.0" layoutY="17.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Save" />
-        </buttons>
-      </ButtonBar>
-   </children>
-   <padding>
-      <Insets left="10.0" />
-   </padding>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0"
+      prefWidth="502.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReservationsController">
+    <children>
+        <ListView fx:id="allrooms" maxWidth="480.0" prefHeight="356.0" prefWidth="469.0"/>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0">
+            <buttons>
+                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Cancel"/>
+                <Button defaultButton="true" layoutX="410.0" layoutY="17.0" mnemonicParsing="false" prefHeight="26.0"
+                        prefWidth="89.0" text="Save"/>
+            </buttons>
+        </ButtonBar>
+    </children>
+    <padding>
+        <Insets left="10.0"/>
+    </padding>
 </VBox>

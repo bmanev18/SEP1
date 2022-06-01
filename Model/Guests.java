@@ -1,8 +1,9 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Guests {
+public class Guests implements Serializable {
     ArrayList<Guest> guests;
 
     public Guests() {
@@ -27,11 +28,11 @@ public class Guests {
         }
         return null;
     }
-    
-    
+
+
     public Guest getMainGuest() {
-    return guests.get(0);
-  }
+        return guests.get(0);
+    }
 
     @Override
     public String toString() {

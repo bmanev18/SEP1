@@ -1,6 +1,8 @@
 package Model;
 
-public class Date {
+import java.io.Serializable;
+
+public class Date implements Serializable {
     private int day;
     private int month;
     private int year;
@@ -73,17 +75,15 @@ public class Date {
     }
 
     public Date copy() {
-        return new Date( day, month, year);
+        return new Date(day, month, year);
     }
 
-    public boolean equals(Object obj)
-    {
-        if(!(obj instanceof Date))
-        {
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Date)) {
             return false;
         }
-        Date other=(Date) obj;
-        return other.day==day && other.month==month && other.year==year;
+        Date other = (Date) obj;
+        return other.day == day && other.month == month && other.year == year;
     }
 
     public boolean isBefore(Date date) {

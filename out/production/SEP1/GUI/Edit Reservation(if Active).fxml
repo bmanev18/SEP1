@@ -3,10 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
@@ -15,173 +14,168 @@
 
 <HBox maxHeight="395.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="389.0" prefWidth="300.0" spacing="10.0">
+      <HBox maxHeight="395.0" prefHeight="100.0" prefWidth="794.0" style="-fx-background-color: #302E2E;">
          <children>
-            <FlowPane prefHeight="0.0" prefWidth="200.0">
+            <VBox prefHeight="389.0" prefWidth="300.0" spacing="10.0">
                <children>
-                  <Label text="Booker's information" textFill="WHITE">
-                     <font>
-                        <Font name="Calibri Light" size="24.0" />
-                     </font>
-                  </Label>
+                  <FlowPane prefHeight="0.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Booker's information" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Light" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+                  <HBox prefHeight="20.0">
+                     <children>
+                        <FlowPane prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Name" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="121.0" promptText="First and Last Name" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Nationality" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="95.0" promptText="Bulgarian" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="48.0" prefHeight="20.0">
+                     <children>
+                        <FlowPane prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Phone" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="121.0" promptText="12 53 89 12" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Date of Birth" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="95.0" promptText="dd//mm//yy" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane prefHeight="20.0" prefWidth="230.0">
+                           <children>
+                              <Label text="Country" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="98.0" promptText="Denmark" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane prefHeight="20.0" prefWidth="230.0">
+                           <children>
+                              <Label text="Post Number" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="93.0" promptText="8000" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane prefHeight="20.0" prefWidth="230.0">
+                           <children>
+                              <Label text="City" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="121.0" promptText="Copenhagen" />
+                           </children>
+                        </FlowPane>
+                        <FlowPane prefHeight="20.0" prefWidth="230.0">
+                           <children>
+                              <Label text="Street" textFill="WHITE">
+                                 <FlowPane.margin>
+                                    <Insets right="10.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="123.0" promptText="Ane Staunnings 27" />
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <FlowPane prefHeight="20.0" prefWidth="200.0" />
                </children>
-            </FlowPane>
-            <FlowPane prefHeight="20.0" prefWidth="200.0">
-               <children>
-                  <Label text="Name" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="121.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="38.0" prefHeight="20.0" prefWidth="200.0">
-               <children>
-                  <Label text="Nationality" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="95.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="63.0" prefHeight="20.0" prefWidth="200.0">
-               <children>
-                  <Label text="Phone" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="124.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="88.0" prefHeight="20.0" prefWidth="230.0">
-               <children>
-                  <Label text="Date of Birth" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="93.0" />
-               </children>
-            </FlowPane>
-            <Separator prefWidth="200.0" />
-            <FlowPane layoutX="10.0" layoutY="153.0" prefHeight="20.0" prefWidth="230.0">
-               <children>
-                  <Label text="Country" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="93.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="153.0" prefHeight="20.0" prefWidth="230.0">
-               <children>
-                  <Label text="Post Number" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="93.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="236.0" prefHeight="20.0" prefWidth="230.0">
-               <children>
-                  <Label text="City" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="93.0" />
-               </children>
-            </FlowPane>
-            <FlowPane layoutX="10.0" layoutY="271.0" prefHeight="20.0" prefWidth="230.0">
-               <children>
-                  <Label text="Street" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="10.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <TextField prefHeight="25.0" prefWidth="123.0" />
-               </children>
-            </FlowPane>
-         </children>
-         <HBox.margin>
-            <Insets left="20.0" top="20.0" />
-         </HBox.margin>
-      </VBox>
-      <Separator maxHeight="350.0" orientation="VERTICAL" prefHeight="100.0">
-         <HBox.margin>
-            <Insets left="50.0" top="20.0" />
-         </HBox.margin>
-      </Separator>
-      <VBox prefHeight="389.0" prefWidth="422.0" spacing="10.0">
-         <children>
-            <FlowPane prefHeight="20.0" prefWidth="200.0">
-               <children>
-                  <Label text="Check-Out Date" textFill="WHITE">
-                     <FlowPane.margin>
-                        <Insets right="5.0" />
-                     </FlowPane.margin>
-                  </Label>
-                  <DatePicker prefHeight="0.0" prefWidth="152.0">
-                     <FlowPane.margin>
-                        <Insets left="10.0" />
-                     </FlowPane.margin>
-                  </DatePicker>
-               </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </FlowPane>
-            <FlowPane layoutX="20.0" layoutY="45.0" prefHeight="20.0" prefWidth="200.0">
-               <children>
-                  <Button mnemonicParsing="false" text="View Guest List">
-                     <FlowPane.margin>
-                        <Insets left="5.0" />
-                     </FlowPane.margin>
-                  </Button>
-               </children>
-            </FlowPane>
-            <Separator prefWidth="200.0">
-               <VBox.margin>
-                  <Insets right="10.0" />
-               </VBox.margin>
+               <HBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <Separator maxHeight="350.0" orientation="VERTICAL" prefHeight="100.0">
+               <HBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </HBox.margin>
             </Separator>
-            <FlowPane prefHeight="20.0" prefWidth="200.0">
+            <VBox prefHeight="389.0" prefWidth="422.0" spacing="10.0">
                <children>
-                  <Label prefHeight="35.0" prefWidth="81.0" text="Rooms" textFill="WHITE">
-                     <font>
-                        <Font name="Calibri Light" size="24.0" />
-                     </font>
-                  </Label>
-                  <Button defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Add Room" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Delete Room">
-                     <FlowPane.margin>
-                        <Insets left="10.0" />
-                     </FlowPane.margin>
-                  </Button>
+                  <FlowPane prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="113.0" text="Guest List" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Light" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Add Guest" />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Delete Guest">
+                           <FlowPane.margin>
+                              <Insets left="10.0" />
+                           </FlowPane.margin>
+                        </Button>
+                        <Button layoutX="213.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Edit">
+                           <FlowPane.margin>
+                              <Insets left="10.0" />
+                           </FlowPane.margin>
+                        </Button>
+                     </children>
+                  </FlowPane>
+                  <ListView maxWidth="400.0" prefHeight="237.0" prefWidth="400.0" />
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                     <buttons>
+                        <Button defaultButton="true" mnemonicParsing="false" text="Save" />
+                        <Button mnemonicParsing="false" text="Cancel" />
+                     </buttons>
+                     <VBox.margin>
+                        <Insets right="10.0" top="30.0" />
+                     </VBox.margin>
+                  </ButtonBar>
                </children>
-            </FlowPane>
-            <TextArea maxWidth="400.0" prefHeight="169.0" prefWidth="380.0" text="&#10;&#10;" />
-            <ButtonBar prefHeight="40.0" prefWidth="200.0">
-               <buttons>
-                  <Button defaultButton="true" mnemonicParsing="false" text="Save" />
-                  <Button mnemonicParsing="false" text="Cancel" />
-               </buttons>
-               <VBox.margin>
-                  <Insets bottom="10.0" right="10.0" />
-               </VBox.margin>
-            </ButtonBar>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
          </children>
-         <HBox.margin>
-            <Insets top="20.0" />
-         </HBox.margin>
-         <padding>
-            <Insets left="10.0" />
-         </padding>
-      </VBox>
+      </HBox>
    </children>
 </HBox>

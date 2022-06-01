@@ -76,6 +76,6 @@ public class Room implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("\n%d - %s : %.2f", roomNumber, roomType, price);
+        return String.format("%d - %s : %.2f", roomNumber, roomType, price);
     }
 }

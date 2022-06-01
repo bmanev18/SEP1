@@ -2,23 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4f1694a-29bc-4da5-b6a5-9cd30ebaaddc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GUI/CheckIn.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoadReservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservations-copy.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Add Rooms to The Reservation.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Check-In .fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/AddRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/AddRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/AddRooms.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Reservations.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/ReservationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/ReservationsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Guests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Guests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Interval.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Interval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ModelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Diagrams/DomainModel.asta" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Diagrams/DomainModel.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Add Rooms to The Reservation.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Check-In .fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Diagrams/3_ClassDiagram.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Diagrams/AD_ManageGuests.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Diagrams/AD_Reservation.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Diagrams/AD_ReservationCheckInAndCheckOut.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Diagrams/DomainModel.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Documentations/Notes for process report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Documentations/Process Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Documentations/log book.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/AddRooms.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/AddRooms.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Edit Reservation(if Active).fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/Edit Reservation(if Active).fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/Reservations.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/Reservations.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP1/GUI/ReservationsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/GUI/ReservationsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Date.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Guest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Guest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Guests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Guests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Interval.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Interval.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/ModelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/ModelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/Model/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/Model/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SEP1/reservations.bin" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SEP1/reservations.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservations.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reservations.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +69,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/manev/Documents/GitHub/SEP1/GUI"
+    "last_opened_file_path": "C:/Users/manev/Documents/GitHub/SEP1"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\manev\Documents\GitHub\SEP1\GUI" />
       <recent name="C:\Users\manev\Documents\GitHub\SEP1" />
+      <recent name="C:\Users\manev\Documents\GitHub\SEP1\GUI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\manev\Documents\GitHub\SEP1\GUI" />
@@ -105,6 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoadReservation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LoadReservation" />
+      <module name="SEP1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testModel" />
       <module name="SEP1" />
@@ -113,6 +140,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.LoadReservation" />
       <item itemvalue="Application.GUI.main" />
       <item itemvalue="Application.GUI.test" />
       <item itemvalue="Application.testModel" />
@@ -121,6 +149,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GUI.test" />
+        <item itemvalue="Application.LoadReservation" />
         <item itemvalue="Application.LoadInitialData" />
         <item itemvalue="Application.testModel" />
         <item itemvalue="Application.GUI.main" />

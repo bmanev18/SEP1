@@ -1,6 +1,8 @@
 package Model;
 
-public class Guest {
+import java.io.Serializable;
+
+public class Guest implements Serializable {
     private String name;
     private String nationality;
     private int phone;

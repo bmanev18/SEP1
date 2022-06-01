@@ -11,7 +11,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -28,20 +27,9 @@ public class ReservationsController implements Initializable {
 
     // ---------- All Reservations ----------
     @FXML
-    private TableView<Reservation> reservations;
-    @FXML
-    private TableColumn<Reservation, String> booker;
-    @FXML
-    private TableColumn<Reservation, String> guestsNum;
-    @FXML
-    private TableColumn<Reservation, String> rooms;
-    @FXML
-    private TableColumn<Reservation, String> interval;
-
+    private ListView<Reservation> reservations;
     @FXML
     private TextField phoneNum;
-    @FXML
-    private Button searchPhone;
     @FXML
     private RadioButton today;
     @FXML
@@ -82,8 +70,11 @@ public class ReservationsController implements Initializable {
     @FXML
     private Button deleteRoom;
     @FXML
+    private ListView<Room> allrooms;
+    @FXML
     private ListView<Room> reservedRooms;
-    private Rooms resRooms;
+
+    private ObservableList<Integer> selectedIndices;
 
     // ---------- Search Rooms ----------
 
@@ -105,12 +96,9 @@ public class ReservationsController implements Initializable {
     private DatePicker checkOutDate;
     @FXML
     private Button search;
+
     private TableView.TableViewSelectionModel<Room> selectionModel;
     ObservableList<Room> select;
-
-
-    @FXML
-    private ListView<Room> allRooms;
 
 
     public void goBackwards(ActionEvent event) throws IOException {
@@ -121,85 +109,73 @@ public class ReservationsController implements Initializable {
         stage.show();
     }
 
-    @FXML
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        booker.setCellValueFactory(new PropertyValueFactory<Reservation, String>("booker"));
-        guestsNum.setCellValueFactory(new PropertyValueFactory<Reservation, String>("numberExpectedGuests"));
-        rooms.setCellValueFactory(new PropertyValueFactory<Reservation, String>("rooms"));
-        interval.setCellValueFactory(new PropertyValueFactory<Reservation, String>("interval"));
-        resRooms = new Rooms();
-
-
-        roomNumber.setCellValueFactory(new PropertyValueFactory<Room, String>("roomNumber"));
-        floor.setCellValueFactory(new PropertyValueFactory<Room, String>("floor"));
-        type.setCellValueFactory(new PropertyValueFactory<Room, String>("roomType"));
-        price.setCellValueFactory(new PropertyValueFactory<Room, String>("price"));
-        //smoking.setCellValueFactory(new PropertyValueFactory<Room, String>("smoking"));
-        selectionModel = searchTable.getSelectionModel();
-        select = selectionModel.getSelectedItems();
-
         modelManager = new ModelManager("reservations.bin", "rooms.bin");
-        allRooms = new ListView<>();
-        updateAllRooms();
         updateRes();
 
 
+        updateAllRooms();
+        selectedIndices = allrooms.getSelectionModel().getSelectedIndices();
     }
 
     public void search(MouseEvent e) {
         ObservableList<Room> list = FXCollections.observableArrayList();
-        list.addAll(
-                modelManager.search(modelManager.createInterval(checkInDate.getValue(), checkOutDate.getValue())).getAll());
+        list.addAll(modelManager.search(modelManager.createInterval(checkInDate.getValue(), checkOutDate.getValue())).getAll());
         searchTable.setItems(list);
     }
 
     public void updateRes() {
-        ObservableList<Reservation> list = FXCollections.observableArrayList();
-        list.addAll(modelManager.getReservations().getAll());
-        reservations.setItems(list);
+        reservations.getItems().addAll(modelManager.getReservations().getAll());
+        phoneNum.clear();
     }
 
-    public void updateAllRooms() {
-        ObservableList<Room> list = FXCollections.observableArrayList();
-        list.addAll(modelManager.getRooms().getAll());
-        allRooms.setItems(list);
-    }
-
-    public void getRooms(MouseEvent mouseEvent) {
-
-    }
-
-    public void openAllRooms(MouseEvent mouseEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddRooms.fxml"));
-            System.out.println(1);
-            Parent root1 = fxmlLoader.load();
-            System.out.println(2);
-            Stage stage = new Stage();
-            System.out.println(3);
-
-            stage.setTitle("Add Rooms");
-
-            System.out.println(4);
-            stage.setScene(new Scene(root1));
-
-            System.out.println(5);
-            stage.show();
-        } catch (Exception e) {
-            System.out.println("Window doesn't exist");
+    public void searchPhone(MouseEvent event) {
+        reservations.getItems().clear();
+        System.out.println("cleared");
+        for (Reservation reservation : reservations.getItems()) {
+            if (reservation.getBooker().getPhone() == Integer.parseInt(phoneNum.getText())) {
+                reservations.getItems().add(reservation);
+                System.out.println("added");
+                break;
+            }
         }
     }
 
+    public void updateAllRooms() {
+        allrooms.getItems().addAll(modelManager.getRooms().getAll());
+    }
 
-    /*public void createReservation() {
+    public void addRoom(MouseEvent event) {
+        reservedRooms.getItems().add(allrooms.getItems().get(selectedIndices.get(0)));
+    }
+
+    public void deleteRoom(MouseEvent event) {
+        reservedRooms.getItems().remove(reservedRooms.getItems().get(selectedIndices.get(0)));
+    }
+
+
+    public void createReservation() {
+
         String[] date = birthday.getText().split("/");
-        modelManager.getReservations().add(new Reservation(new Guest(name.getText(), Integer.parseInt(phone.getText()), nationality.getText(),
+        Rooms resRooms = new Rooms();
+        resRooms.getAll().addAll(reservedRooms.getItems());
+
+        Reservations all = modelManager.getReservations();
+
+        all.add(new Reservation(new Guest(name.getText(), Integer.parseInt(phone.getText()), nationality.getText(),
                 new Date(Integer.parseInt(date[0]), Integer.parseInt(date[1]), Integer.parseInt(date[2])),
                 new Address(street.getText(), Integer.parseInt(post.getText()), city.getText(), country.getText())),
                 resRooms,
                 modelManager.createInterval(checkIn.getValue(), checkOut.getValue()),
                 Integer.parseInt(guestNum.getText())));
-    }
-*/
 
+        //System.out.println(all.getAll().size());
+        modelManager.saveReservations(all);
+    }
+
+
+    public void filterToday(ActionEvent event) {
+        
+    }
 }

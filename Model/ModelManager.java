@@ -125,6 +125,7 @@ public class ModelManager {
             System.out.println("File not found");
         } catch (IOException e) {
             System.out.println("IO Error writing to file");
+            e.printStackTrace();
         }
     }
 
