@@ -160,10 +160,13 @@
                               <Insets />
                            </FlowPane.margin>
                         </Label>
-                        <DatePicker />
+                        <DatePicker>
+                           <FlowPane.margin>
+                              <Insets left="5.0" />
+                           </FlowPane.margin></DatePicker>
                      </children>
                      <VBox.margin>
-                        <Insets top="50.0" />
+                        <Insets top="25.0" />
                      </VBox.margin>
                   </FlowPane>
                   <Separator prefWidth="200.0" />

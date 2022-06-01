@@ -10,20 +10,19 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="500.0" style="-fx-background-color: #302E2E;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <FlowPane hgap="10.0" prefHeight="34.0" prefWidth="490.0">
          <children>
-            <RadioButton mnemonicParsing="false" text="Extra Bed" textFill="WHITE" />
+            <RadioButton mnemonicParsing="false" text="Extra Bed" textFill="WHITE">
+               <FlowPane.margin>
+                  <Insets left="15.0" />
+               </FlowPane.margin></RadioButton>
             <ChoiceBox disable="true" prefWidth="150.0" />
          </children>
          <VBox.margin>
@@ -138,7 +137,7 @@
                               <Insets right="5.0" />
                            </FlowPane.margin>
                         </Label>
-                        <ComboBox prefHeight="26.0" prefWidth="114.0" />
+                        <ComboBox prefHeight="26.0" prefWidth="52.0" />
                      </children>
                   </FlowPane>
                   <FlowPane hgap="5.0" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="196.0" />
@@ -169,7 +168,7 @@
       </Label>
       <HBox prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ListView prefHeight="200.0" prefWidth="316.0">
+            <ListView maxHeight="195.0" prefHeight="195.0" prefWidth="316.0">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
@@ -178,20 +177,6 @@
                <HBox.margin>
                   <Insets left="25.0" top="10.0" />
                </HBox.margin>
-               <effect>
-                  <Lighting>
-                     <bumpInput>
-                        <Shadow />
-                     </bumpInput>
-                     <light>
-                        <Light.Distant>
-                           <color>
-                              <Color red="0.8526315689086914" green="0.5210526585578918" blue="0.5210526585578918" />
-                           </color>
-                        </Light.Distant>
-                     </light>
-                  </Lighting>
-               </effect>
             </Button>
          </children>
       </HBox>
