@@ -38,11 +38,16 @@ public class ModelManager {
         saveRooms(rooms);
     }
 
+    public void removeReservation(Reservation reservation) {
+        Reservations reservations = getReservations();
+        reservations.remove(reservation);
+        saveReservations(reservations);
+    }
+
     public void removeRoom(Room room) {
         Rooms rooms = getRooms();
         rooms.remove(room);
-        //rooms.getAll().remove(room);
-        System.out.println(room);
+        //System.out.println(room);
         saveRooms(rooms);
 
     }
@@ -58,27 +63,40 @@ public class ModelManager {
     }
 
     public Rooms search(Interval interval) {
-        Rooms available = getRooms().copy();
-        for (Reservation reservation : getReservations().getAll()) {
+        // a copy of the Rooms object will be used for editing
+        Rooms available = getRooms().copy();    // 2+n time complexity
+        // Iterating through all the reservations from the file
+        for (Reservation reservation : getReservations().getAll()) {    // n^2 time complexity
+            /*if the given check-in and/or check-out date clashes with check-in
+            and/or check-out dates of already created reservations*/
             if ((!interval.getCheckOutDate().isBefore(reservation.getInterval().getCheckInDate()))
                     || (!reservation.getInterval().getCheckOutDate().isBefore(interval.getCheckInDate()))) {
-                available.getAll().removeAll(reservation.getRooms().getAll());
+                // 8 time complexities
+                // Remove all rooms reserved for the given reservation from the Rooms object we are using
+                available.getAll().removeAll(reservation.getRooms().getAll()); // n^2 time complexities
             }
         }
-        return available;
+        return available; // 1 time complexity
+        // O() = 2+n + n^2 + 8 + n^2 = O(n^2)
     }
 
     public Rooms filter(Interval interval, String roomType, int price) {
-        Rooms available = this.search(interval);
-        if (price != 0) {
-            available.filer(price);
+        //  First return all available rooms for a given Interval and filter if requested
+        Rooms available = this.search(interval);    // 1 + n^2 time complexity
+        // if a preferred price was given then filter by price
+        if (price != 0) {   // 1 time complexity
+            // filtering by price
+            available.filter(price); // O(n)
+            // if a preferred room type was given then filter by room type
             if (roomType != null) {
-                available.filter(roomType);
+                // filtering by room type
+                available.filter(roomType); // O(n)
             }
         }
+        //returning all available rooms after filtering
         return available;
-    } //  First return all available rooms for a given Interval and filter if requested
-
+        // O() = 1+n^2 + 1 + n + n = O(n^2)
+    }
 
     public Rooms searchToday(LocalDate local) {
         Date today = new Date(local.getDayOfMonth(), local.getMonthValue(), local.getYear());
@@ -136,5 +154,8 @@ public class ModelManager {
                 new Date(out.getDayOfMonth(), out.getMonthValue(), out.getYear()));
     }
 
+    public Date createDate(LocalDate today) {
+        return new Date(today.getDayOfMonth(), today.getMonthValue(), today.getYear());
+    }
 
 }

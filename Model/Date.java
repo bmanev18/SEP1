@@ -87,18 +87,22 @@ public class Date implements Serializable {
     }
 
     public boolean isBefore(Date date) {
-        if (this.year >= date.year) {
-            if (this.year > date.year) {
-                return false;
+        if (this.year >= date.year) {   // 4 time complexities
+            // if the years are not equal
+            if (this.year > date.year) { // 3 time complexities
+                return false; // 1 time complexity
             }
-            if (this.month >= date.month) {
-                if (this.month > date.month) {
-                    return false;
+            if (this.month >= date.month) {     // 4 time complexity
+                // if the months are not equal
+                if (this.month > date.month) {  // 3 time complexities
+                    return false;   // 1 time complexity
                 }
-                return this.day >= date.day;
+                // return the boolean result of day comparison
+                return this.day >= date.day; // 5 time complexities
             }
         }
-        return true;
+        return true;    // 1 time complexity
+        // O() = 22 = O(1)
     }
 
     public String toString() {

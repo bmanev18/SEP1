@@ -19,8 +19,8 @@ public class Reservations implements Serializable {
         reservations.add(reservation);
     }
 
-    public void remove(int phone) {
-        reservations.remove(getReservation(phone));
+    public void remove(Reservation reservation) {
+        reservations.remove(reservation);
     }
 
     public Reservation getReservation(int phone) {

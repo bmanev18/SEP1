@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -66,15 +67,12 @@ public class ReservationsController implements Initializable {
     @FXML
     private TextField guestNum;
     @FXML
-    private Button addRoom;
-    @FXML
-    private Button deleteRoom;
-    @FXML
     private ListView<Room> allrooms;
     @FXML
     private ListView<Room> reservedRooms;
 
     private ObservableList<Integer> selectedIndices;
+    private Reservation selected;
 
     // ---------- Search Rooms ----------
 
@@ -126,6 +124,7 @@ public class ReservationsController implements Initializable {
     }
 
     public void updateRes() {
+        reservations.getItems().clear();
         reservations.getItems().addAll(modelManager.getReservations().getAll());
         phoneNum.clear();
     }
@@ -163,19 +162,25 @@ public class ReservationsController implements Initializable {
 
         Reservations all = modelManager.getReservations();
 
-        all.add(new Reservation(new Guest(name.getText(), Integer.parseInt(phone.getText()), nationality.getText(),
-                new Date(Integer.parseInt(date[0]), Integer.parseInt(date[1]), Integer.parseInt(date[2])),
-                new Address(street.getText(), Integer.parseInt(post.getText()), city.getText(), country.getText())),
-                resRooms,
-                modelManager.createInterval(checkIn.getValue(), checkOut.getValue()),
-                Integer.parseInt(guestNum.getText())));
+        all.add(new Reservation(new Guest(name.getText(), Integer.parseInt(phone.getText()), nationality.getText(), new Date(Integer.parseInt(date[0]), Integer.parseInt(date[1]), Integer.parseInt(date[2])), new Address(street.getText(), Integer.parseInt(post.getText()), city.getText(), country.getText())), resRooms, modelManager.createInterval(checkIn.getValue(), checkOut.getValue()), Integer.parseInt(guestNum.getText())));
 
         //System.out.println(all.getAll().size());
         modelManager.saveReservations(all);
+        updateRes();
+    }
+
+    public void filterToday(ActionEvent event) {
+        if (today.isSelected()) {
+            reservations.getItems().removeIf(reservation -> !reservation.getInterval().getCheckInDate().equals(modelManager.createDate(LocalDate.now())));
+        } else {
+            updateRes();
+        }
     }
 
 
-    public void filterToday(ActionEvent event) {
-        
+    public void removeReservation(ActionEvent event) {
+        selected = reservations.getSelectionModel().getSelectedItems().get(0);
+        modelManager.removeReservation(reservations.getItems().get(selectedIndices.get(0)));
+        updateRes();
     }
 }
