@@ -1,0 +1,269 @@
+
+html::-webkit-scrollbar {
+    width: 5px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: #696969;
+}
+html::-webkit-scrollbar-track {
+    background-color: #C0C0C0;
+}
+
+
+
+
+#myInput {
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    width: 94%;
+    margin-left: 15px; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 20px;
+    margin-top: 90px;
+  }
+  
+  #searchTable {
+    border-collapse: collapse;
+    width: 97%; 
+    border: 1px solid #ddd;
+    font-size: 18px; 
+    margin-left: 25px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+   
+  }
+  
+  #searchTable th, #searchTable td {
+    text-align: left; 
+    padding: 12px;
+    
+  }
+  
+  #searchTable tr {
+   
+    border-bottom: 1px solid #ddd;
+   
+  }
+  
+  #searchTable tr.header, #searchTable tr:hover {
+    
+    background-color: #f1f1f1;
+
+  }
+
+
+  .alignheader {
+    width: 95%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background: #0000b3;
+    height: 80px;
+    position: static;
+    border-bottom: black solid 3px;
+}
+
+.logo {
+    float: left;
+    height: 140px;
+    width: 140px;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+nav li {
+    float: left;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+}
+a:hover {
+    font-weight: bold;
+}
+
+
+
+footer {
+    height: 300px;
+    width: 100%;
+    background: #0000b3;
+    border-top: black solid 3px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.menuTab {
+    /* position: absolute; */
+    float: left;
+    height: 80%;
+    width: 33%;
+    color: aliceblue;
+    padding-top: 40px;
+}
+
+#logoTab{
+    padding-top: 0px;
+}
+
+#footerLinks {
+    list-style: none;
+}
+
+.menuTab a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+}
+
+#connections{
+    margin-left: 70px;
+}
+
+h2{
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#logoFooter {
+    height: 100%;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*remaining rest*/
+
+body {
+    background-color: white;
+    margin: auto;
+
+}
+
+.alignheader {
+    width: 95%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background: #0000b3;
+    height: 80px;
+    position: static;
+    border-bottom: black solid 3px;
+}
+
+.logo {
+    float: left;
+    height: 140px;
+    width: 140px;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+nav li {
+    float: left;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+footer {
+    height: 300px;
+    width: 100%;
+    background: #0000b3;
+    border-top: black solid 3px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.menuTab {
+    /* position: absolute; */
+    float: left;
+    height: 80%;
+    width: 33%;
+    color: aliceblue;
+    padding-top: 40px;
+}
+
+#logoTab{
+    padding-top: 0px;
+}
+
+#footerLinks {
+    list-style: none;
+}
+
+.menuTab a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+}
+
+#connections{
+    margin-left: 70px;
+}
+
+h2{
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#logoFooter {
+    height: 100%;
+    margin-left: 150px;
+    margin-top: 30px;
+}

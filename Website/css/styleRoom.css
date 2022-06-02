@@ -1,0 +1,203 @@
+/*CSS Done by ZSOLT*/
+
+/*header Done by Radoslav*/
+
+
+.alignheader {
+    width: 95%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background: #0000b3;
+    height: 80px;
+    position: static;
+    border-bottom: black solid 3px;
+}
+
+.logo {
+    float: left;
+    height: 140px;
+    width: 140px;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+nav li {
+    float: left;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+body {
+    background-color: white;
+    margin: auto;
+
+}
+
+.RoomPics:hover {
+    border: 4px red;
+}
+
+div.container
+{
+    margin-right:auto;
+    margin-left: auto;
+}
+
+div.RoomPics {
+
+    margin-top: 40px;
+    margin-bottom: 50px;
+    max-height: auto;
+    box-shadow: 0 10px 100px 0;
+    border-radius: 30px 30px;
+    background-color: whitesmoke;
+    border: 4px solid wheat;
+}
+
+.RoomPics:hover {
+    border: 6px solid wheat;
+}
+
+
+div.Room-names {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    padding-right: 40%;
+    padding-bottom: 25px;
+    float: center;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+
+}
+
+p{
+    text-align: center;
+}
+
+div.icons {
+
+    height: auto;
+    width: auto;
+    float: center;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+
+}
+
+.responsive {
+
+    width: 100%;
+    min-width: 30%;
+    height: auto;
+    border-radius: 30px 30px 0px 0px;
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #696969;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #C0C0C0;
+}
+
+div.first-content {
+    float: center;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+
+div.divider {
+    float: center;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+
+}
+
+
+/* Footer done by Bozhidar */
+
+footer {
+    height: 300px;
+    width: 100%;
+    background: #0000b3;
+    border-top: black solid 3px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.menuTab {
+    /* position: absolute; */
+    float: left;
+    height: 80%;
+    width: 33%;
+    color: aliceblue;
+    padding-top: 40px;
+}
+
+#logoTab{
+    padding-top: 0px;
+}
+
+#footerLinks {
+    list-style: none;
+}
+
+.menuTab a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+}
+
+#connections{
+    margin-left: 70px;
+}
+
+h2{
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#logoFooter {
+    height: 100%;
+    margin-left: 150px;
+    margin-top: 30px;
+}

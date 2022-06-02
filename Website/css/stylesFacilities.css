@@ -1,0 +1,177 @@
+.headerFacility {
+    font-size: 30px;
+    font-family: Cinzel;
+    text-align: center;
+}
+
+.introPara {
+    font-family: Cinzel;
+    text-align: center;
+}
+
+body {
+    margin: auto;
+    background-color: white;
+}
+
+.para,
+.title {
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.Myimg {
+    float: right;
+}
+
+.dividerTop {
+    text-align: center;
+}
+
+.photosLeft,
+.photosRight {
+    width: 400px;
+    height: 314px;
+}
+
+.photosLeft {
+    float: left;
+}
+
+.photosRight {
+    float: right;
+}
+
+.fact {
+    margin-right: 120px;
+    margin-left: 120px;
+    background-color: bisque;
+    overflow: auto;
+    border-radius: 20px 50px 50px 50px;
+    border: 4px solid #777;
+    font-family: Cinzel;
+    box-shadow: 0 10px 10px 0;
+    text-align: center;
+}
+
+div.fact:hover {
+    border: 8px solid rgb(33, 113, 206);
+}
+
+.facteven {
+    margin-right: 120px;
+    margin-left: 120px;
+    background-color: bisque;
+    overflow: auto;
+    border-radius: 50px 20px 50px 50px;
+    border: 4px solid #777;
+    font-family: Cinzel;
+    box-shadow: 0 10px 10px 0;
+}
+
+div.facteven:hover {
+    border: 8px solid rgb(33, 113, 206);
+}
+
+
+/* Header by Radoslav */
+.alignheader {
+    width: 95%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    background: #0000b3;
+    height: 80px;
+    position: static;
+    border-bottom: black solid 3px;
+}
+
+.logo {
+    float: left;
+    height: 140px;
+    width: 140px;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    font-family: Cinzel;
+}
+
+nav li {
+    float: left;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+/* Footer by Bozhidar */
+
+footer {
+    height: 300px;
+    width: 100%;
+    background: #0000b3;
+    border-top: black solid 3px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.menuTab {
+    /* position: absolute; */
+    float: left;
+    height: 80%;
+    width: 33%;
+    color: aliceblue;
+    padding-top: 40px;
+}
+
+#logoTab {
+    padding-top: 0px;
+}
+
+#footerLinks {
+    list-style: none;
+}
+
+.menuTab a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+}
+
+#connections {
+    margin-left: 70px;
+}
+
+h2 {
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#logoFooter {
+    height: 100%;
+    margin-left: 150px;
+    margin-top: 30px;
+}
